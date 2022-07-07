@@ -1,0 +1,115 @@
+:root {
+    --backgroundColor: #15133C;
+    --letterColor: #EC994B;
+    --formulario: #73777B;
+    --linksColor: #F1EEE9;
+  }
+  
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: var(--letterColor);
+  }
+
+  html {
+    font-family: 'Poppins', sans-serif;
+    
+  } 
+  
+  body {
+    background-color: var(--backgroundColor);
+  }
+  
+  ul,
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--linksColor);
+  }
+
+  /*  ---------------------  */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 50px 50px 0;
+}
+
+.container h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.formulario input {
+  margin: .5rem 0;
+  font-size: .9rem;
+  font-weight: 100;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  line-height: 2rem;
+}
+
+.formulario input:focus {
+  border-bottom: 1px solid var(--letterColor);
+}
+
+.formulario .btn--agregarContacto {
+  margin: .5rem 0;
+  background-color: var(--formulario);
+  border: none;
+  border-radius: 3px;
+  padding: 7px 0;
+  font-weight: 400;
+  font-size: .9rem;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.listado {
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+.listado .titulos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listado--contactos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: .9rem;
+  margin: 10px 0 10px 0;
+}
+
+.listado--contactos h3 {
+  font-weight: normal;
+  color: white;
+}
+
+.icono {
+  color: tomato;
+  cursor: pointer;
+  outline: none;
+}
