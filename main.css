@@ -19,6 +19,7 @@
   
   body {
     background-color: var(--backgroundColor);
+    min-width: 400px;
   }
   
   ul,
@@ -89,7 +90,7 @@
   flex-direction: column;
 }
 
-.listado .titulos {
+.titulos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,4 +113,29 @@
   color: tomato;
   cursor: pointer;
   outline: none;
+}
+
+
+
+@media (min-width: 650px) {
+
+  .formulario input {
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    font-weight: 100;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    line-height: 2rem;
+  }
+
+  .listado {
+    display: flex;
+    max-width: 800px;
+    /* justify-content: center; */
+    margin: 30px auto 0;
+    flex-direction: column;
+  }
+
 }
