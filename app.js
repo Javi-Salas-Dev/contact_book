@@ -9,12 +9,12 @@ const db = window.localStorage;
 
 
 btnAgregarContacto.onclick = () => {
-    let contacto = {
-        id: Math.random(1,100),
-        nombre: nombre.value,
-        numero: numero.value,
-        direccion: direccion.value,
-    }
+        let  contacto = {
+            id: Math.random(1,100),
+            nombre: nombre.value,
+            numero: numero.value,
+            direccion: direccion.value,
+        }
     // console.log(contacto);
 
     guardarContacto(db, contacto);

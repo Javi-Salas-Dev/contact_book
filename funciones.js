@@ -20,6 +20,7 @@ const crearContacto = (parentNode, contacto, db) => {
     let direccionContacto = document.createElement('h3')
     let iconEdit = document.createElement('span')
     let iconBorrar = document.createElement('span')
+    let enlaceModificar = document.createElement('a')
 
     nombreContacto.innerHTML = contacto.nombre
     numeroContacto.innerHTML = contacto.numero
@@ -31,7 +32,7 @@ const crearContacto = (parentNode, contacto, db) => {
     divContacto.classList.add('listado--contactos')
     iconEdit.classList.add('material-symbols-outlined', 'icono')
     iconBorrar.classList.add('material-symbols-outlined', 'icono')
-
+    enlaceModificar.setAttribute('href', "edit_contact.html")
 
     // borrar contacto de storage y se refresque la pagina
 
@@ -44,7 +45,10 @@ const crearContacto = (parentNode, contacto, db) => {
     divContacto.appendChild(numeroContacto)
     divContacto.appendChild(direccionContacto)
     divContacto.appendChild(iconEdit)
+    divContacto.appendChild(enlaceModificar)
     divContacto.appendChild(iconBorrar)
+    enlaceModificar.appendChild(iconEdit)
+    
 
     parentNode.appendChild(divContacto)
 }
