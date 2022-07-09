@@ -18,14 +18,18 @@ const crearContacto = (parentNode, contacto, db) => {
     let nombreContacto = document.createElement('h3')
     let numeroContacto = document.createElement('h3')
     let direccionContacto = document.createElement('h3')
+    let iconEdit = document.createElement('span')
     let iconBorrar = document.createElement('span')
 
     nombreContacto.innerHTML = contacto.nombre
     numeroContacto.innerHTML = contacto.numero
     direccionContacto.innerHTML = contacto.direccion
+    iconEdit.innerHTML = 'edit'
     iconBorrar.innerHTML = 'delete_forever'
+    
 
     divContacto.classList.add('listado--contactos')
+    iconEdit.classList.add('material-symbols-outlined', 'icono')
     iconBorrar.classList.add('material-symbols-outlined', 'icono')
 
 
@@ -39,6 +43,7 @@ const crearContacto = (parentNode, contacto, db) => {
     divContacto.appendChild(nombreContacto)
     divContacto.appendChild(numeroContacto)
     divContacto.appendChild(direccionContacto)
+    divContacto.appendChild(iconEdit)
     divContacto.appendChild(iconBorrar)
 
     parentNode.appendChild(divContacto)
